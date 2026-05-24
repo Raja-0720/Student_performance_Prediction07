@@ -1,5 +1,5 @@
 {
-  "model_name": "Linear Regression",
+  "model_name": "Lasso Regression",
   "features": [
     "age",
     "gender",
@@ -15,12 +15,19 @@
     "mental_health_rating",
     "extracurricular_participation"
   ],
-  "r2": 0.8807,
-  "rmse": 5.5317,
-  "mae": 4.4561,
-  "cv_r2": 0.8742,
+  "r2": 0.881,
+  "rmse": 5.5245,
+  "mae": 4.4587,
+  "cv_r2": 0.875,
   "use_scaler": true,
   "all_results": [
+    {
+      "Model": "Lasso Regression",
+      "R\u00b2": 0.881,
+      "CV R\u00b2": 0.875,
+      "RMSE": 5.5245,
+      "MAE": 4.4587
+    },
     {
       "Model": "Linear Regression",
       "R\u00b2": 0.8807,

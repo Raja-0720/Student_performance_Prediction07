@@ -1,0 +1,67 @@
+{
+  "model_name": "Linear Regression",
+  "features": [
+    "age",
+    "gender",
+    "study_hours_per_day",
+    "social_media_hours",
+    "part_time_job",
+    "attendance_percentage",
+    "sleep_hours",
+    "diet_quality",
+    "exercise_frequency",
+    "parental_education_level",
+    "internet_quality",
+    "mental_health_rating",
+    "extracurricular_participation"
+  ],
+  "r2": 0.8807,
+  "rmse": 5.5317,
+  "mae": 4.4561,
+  "cv_r2": 0.8742,
+  "use_scaler": true,
+  "all_results": [
+    {
+      "Model": "Linear Regression",
+      "R\u00b2": 0.8807,
+      "CV R\u00b2": 0.8742,
+      "RMSE": 5.5317,
+      "MAE": 4.4561
+    },
+    {
+      "Model": "Ridge Regression",
+      "R\u00b2": 0.8806,
+      "CV R\u00b2": 0.8742,
+      "RMSE": 5.5332,
+      "MAE": 4.4573
+    },
+    {
+      "Model": "Gradient Boosting",
+      "R\u00b2": 0.8574,
+      "CV R\u00b2": 0.8416,
+      "RMSE": 6.0469,
+      "MAE": 4.8198
+    },
+    {
+      "Model": "Extra Trees",
+      "R\u00b2": 0.848,
+      "CV R\u00b2": 0.8313,
+      "RMSE": 6.2433,
+      "MAE": 4.977
+    },
+    {
+      "Model": "Random Forest",
+      "R\u00b2": 0.8439,
+      "CV R\u00b2": 0.833,
+      "RMSE": 6.3263,
+      "MAE": 4.9593
+    },
+    {
+      "Model": "SVR",
+      "R\u00b2": 0.7835,
+      "CV R\u00b2": 0.7774,
+      "RMSE": 7.4503,
+      "MAE": 5.68
+    }
+  ]
+}

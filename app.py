@@ -12,6 +12,60 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+# ─── Hide Streamlit Default UI ────────────────────────────────────────────────
+hide_streamlit_style = """
+<style>
+
+/* Hide Streamlit header */
+header {
+    visibility: hidden;
+}
+
+/* Hide hamburger menu */
+#MainMenu {
+    visibility: hidden;
+}
+
+/* Hide footer */
+footer {
+    visibility: hidden;
+}
+
+/* Hide top toolbar */
+[data-testid="stToolbar"] {
+    display: none;
+}
+
+/* Hide deploy/manage app button */
+.stDeployButton {
+    display: none;
+}
+
+/* Hide top-right icons */
+[data-testid="stDecoration"] {
+    display: none;
+}
+
+/* Hide status widget */
+[data-testid="stStatusWidget"] {
+    display: none;
+}
+
+/* Hide bottom-right manage app button */
+[data-testid="manage-app-button"] {
+    display: none;
+}
+
+/* Remove extra top padding */
+.block-container {
+    padding-top: 1rem;
+}
+
+</style>
+"""
+
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 # ─── Custom CSS ───────────────────────────────────────────────────────────────
 st.markdown("""
 <style>
@@ -250,7 +304,3 @@ if submitted:
 
     for icon, text in insights:
         st.info(f"{icon} {text}")
-
-# ─── Footer ───────────────────────────────────────────────────────────────────
-st.markdown("---")
-st.caption("🎓 Student Performance Prediction | ML Pipeline: Data Cleaning → EDA → Model Training → Deployment")

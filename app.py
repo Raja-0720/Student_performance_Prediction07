@@ -129,7 +129,7 @@ except FileNotFoundError:
 st.markdown("""
 <div class="main-header">
     <h1>🎓 Student Performance Predictor</h1>
-    <p>Enter student details to predict exam score using Machine Learning</p>
+    <p>Enter student details to predict exam score</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -228,9 +228,9 @@ if submitted:
         <div class="result-box" style="background: linear-gradient(135deg, {color}aa, {color});">
             <div style="font-size: 3.5rem; font-weight: 900;">{pred:.1f} / 100</div>
             <div style="font-size: 1.3rem; margin-top: 0.5rem;">{emoji} Grade {grade} — {grade_label}</div>
-            <div style="font-size: 0.9rem; margin-top: 0.3rem; opacity: 0.9;">
-                Predicted by: {meta['model_name']}
-            </div>
+            # <div style="font-size: 0.9rem; margin-top: 0.3rem; opacity: 0.9;">
+            #     Predicted by: {meta['model_name']}
+            # </div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -304,3 +304,46 @@ if submitted:
 
     for icon, text in insights:
         st.info(f"{icon} {text}")
+
+
+hide_streamlit_style = """
+<style>
+
+/* COMPLETE HEADER REMOVAL */
+header {visibility: hidden; height:0;}
+footer {visibility: hidden;}
+#MainMenu {visibility: hidden;}
+
+/* TOOLBAR */
+[data-testid="stToolbar"] {
+    display: none !important;
+}
+
+/* DEPLOY BUTTON */
+.stDeployButton {
+    display:none !important;
+}
+
+/* FLOATING MANAGE BUTTON */
+button[kind="secondary"][data-testid="floatingButton"] {
+    display: none !important;
+}
+
+[data-testid="stFloatingButton"] {
+    display: none !important;
+}
+
+/* REMOVE FLOATING BOTTOM ELEMENTS */
+div[data-testid="stDecoration"] {
+    display:none !important;
+}
+
+/* REMOVE FIXED ELEMENTS */
+div[style*="position: fixed"] {
+    display: none !important;
+}
+
+</style>
+"""
+
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)

@@ -228,9 +228,7 @@ if submitted:
         <div class="result-box" style="background: linear-gradient(135deg, {color}aa, {color});">
             <div style="font-size: 3.5rem; font-weight: 900;">{pred:.1f} / 100</div>
             <div style="font-size: 1.3rem; margin-top: 0.5rem;">{emoji} Grade {grade} — {grade_label}</div>
-            # <div style="font-size: 0.9rem; margin-top: 0.3rem; opacity: 0.9;">
-            #     Predicted by: {meta['model_name']}
-            # </div>
+            
         </div>
         """, unsafe_allow_html=True)
 
